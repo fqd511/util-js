@@ -1,0 +1,16 @@
+{
+  "name": "@digvan/util",
+  "version": "0.0.1",
+  "description": "javascript util funcitons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "util"
+  ],
+  "author": "digvan",
+  "license": "MIT"
+}
