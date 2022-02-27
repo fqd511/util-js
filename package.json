@@ -2,9 +2,20 @@
   "name": "@digvan/util",
   "version": "0.0.2",
   "description": "javascript util functions",
-  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/util.umd.js",
+  "module": "./dist/util.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/util.es.js",
+      "require": "./dist/util.umd.js"
+    }
+  },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "pub": "npm run build && npm version patch && npm publish --access=public --registry=https://registry.npmjs.org"
   },
   "keywords": [
     "javascript",
@@ -16,7 +27,9 @@
   "devDependencies": {
     "prettier": "^2.5.1",
     "rollup": "^2.67.2",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.5.5"
   }
