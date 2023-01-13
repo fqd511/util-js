@@ -1,1 +1,2 @@
-export * from './platform'
+export * from "./platform";
+export * from "./notion";

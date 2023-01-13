@@ -32,5 +32,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-ts": "^2.0.5",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.3"
   }
 }
