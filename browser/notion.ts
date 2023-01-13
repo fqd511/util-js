@@ -33,19 +33,25 @@ export function checkAuth({
 
 /**
  * update service status and ip in notion db
- * @param key
- * @param dbId
- * @param token
- * @param isAlive
- * @param ip
+ * @param key service key
+ * @param dbId notion db id
+ * @param token access token
+ * @param isAlive is service alive
+ * @param ip service machine ip
  */
-function updateServiceStatus(
-  key: string,
-  dbId?: string,
-  token?: string,
+export function updateServiceStatus({
+  key,
+  dbId,
+  token,
   isAlive = true,
-  ip?: string
-): boolean {
+  ip,
+}: {
+  key: string;
+  dbId?: string;
+  token?: string;
+  isAlive?: boolean;
+  ip?: string;
+}): boolean {
   // Initializing a client
   const notion = new Client({
     auth: token,
