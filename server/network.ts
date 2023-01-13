@@ -2,7 +2,7 @@ import * as os from "os";
 
 /**
  * get ip addresses of current machine
- * @return {string[]} ipList
+ * @return {string[]} ipList, eg( [ '10.1.1.144', '172.16.14.2' ] )
  */
 export function getIPList(): string[] {
   const interfaces = os.networkInterfaces();
