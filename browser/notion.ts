@@ -44,7 +44,7 @@ export function updateServiceStatus({
   dbId,
   token,
   isAlive = true,
-  ip,
+  ip = "",
 }: {
   key: string;
   dbId?: string;
@@ -52,6 +52,9 @@ export function updateServiceStatus({
   isAlive?: boolean;
   ip?: string;
 }): boolean {
+  if (!key || !dbId || !token) {
+    return false;
+  }
   // Initializing a client
   const notion = new Client({
     auth: token,
