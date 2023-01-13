@@ -5,13 +5,24 @@ import { Client } from "@notionhq/client";
  * @param key key of auth item
  * @param dbId auth db id
  * @param token access token
+ * @param promptStr prompt label
  */
-export function checkAuth(key: string, dbId?: string, token?: string): boolean {
+export function checkAuth({
+  key,
+  dbId,
+  token,
+  promptStr = "Input Password Please:",
+}: {
+  key: string;
+  dbId?: string;
+  token?: string;
+  promptStr?: string;
+}): boolean {
   if (!key || !dbId || !token) {
     return false;
   }
   const url = window ? window.location.hostname : "";
-  const psd = prompt("Input Password Please:");
+  const psd = prompt(promptStr);
 
   // Initializing a client
   const notion = new Client({
