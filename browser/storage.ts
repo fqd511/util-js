@@ -11,7 +11,7 @@ export function useConst(name: string) {
       ? undefined
       : fromQuery === ""
       ? false
-      : JSON.parse(fromQuery);
+      : fromQuery;
   // maybe undefined
   const globalValue = window[name] as string | null;
   let sessionStorageValue, localStorageValue;
@@ -24,8 +24,8 @@ export function useConst(name: string) {
   }
   if (queryValue !== undefined) {
     window[name] = queryValue;
-    window.localStorage.setItem(name, queryValue);
-    window.sessionStorage.setItem(name, queryValue);
+    window.localStorage.setItem(name, queryValue.toString());
+    window.sessionStorage.setItem(name, queryValue.toString());
   } else if (localStorageValue) {
     window[name] = localStorageValue;
     window.sessionStorage.setItem(name, localStorageValue);
