@@ -4,6 +4,7 @@
  * @param delay
  */
 export function notice(content: string, delay = 3000) {
+  if (!content) return;
   const wrapper = document.createElement("div");
 
   wrapper.style.position = "absolute";
