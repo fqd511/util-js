@@ -18,7 +18,10 @@ export function notice(content: string, delay = 3000) {
   const element = document.createElement("span");
   element.style.padding = "1rem";
   element.textContent = content;
-  element.style.background = "white";
+  element.style.color =
+    document.getElementsByTagName("body")[0].style.color || "black";
+  element.style.background =
+    document.getElementsByTagName("body")[0].style.background || "white";
   element.style.boxShadow = "rgb(149 157 165 / 20%) 0px 8px 24px";
   element.style.borderRadius = "0.4rem";
 
