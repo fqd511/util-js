@@ -12,6 +12,10 @@
     ".": {
       "import": "./dist/util.es.js",
       "require": "./dist/util.umd.js"
+    },
+    "./css-reset": {
+      "import": "./css-reset/joshwcomeau.css",
+      "require": "./css-reset/joshwcomeau.css"
     }
   },
   "scripts": {
