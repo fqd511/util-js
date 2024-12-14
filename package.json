@@ -3,7 +3,8 @@
   "version": "0.0.7",
   "description": "javascript util functions",
   "files": [
-    "dist"
+    "dist",
+    "css"
   ],
   "main": "./dist/util.umd.js",
   "type": "module",
@@ -13,9 +14,9 @@
       "import": "./dist/util.es.js",
       "require": "./dist/util.umd.js"
     },
-    "./css-reset": {
-      "import": "./css-reset/joshwcomeau.css",
-      "require": "./css-reset/joshwcomeau.css"
+    "./reset.css": {
+      "import": "./css/reset.css",
+      "require": "./css/reset.css"
     }
   },
   "scripts": {
